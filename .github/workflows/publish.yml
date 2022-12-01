@@ -71,12 +71,12 @@ jobs:
           tags: ${{ steps.hello-world.outputs.tags }}
           labels: ${{ steps.hello-world.outputs.labels }}
 
-      - name: Docker Hub Description
-        if: github.event_name != 'pull_request'
-        uses: peter-evans/dockerhub-description@v3
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-          repository: cernoel/hello-world
-          readme-filepath: ./README.md
-          short-description: "Hello World Web Server"
+      #- name: Docker Hub Description
+      #  if: github.event_name != 'pull_request'
+      #  uses: peter-evans/dockerhub-description@v3
+      #  with:
+      #    username: ${{ secrets.DOCKERHUB_USERNAME }}
+      #    password: ${{ secrets.DOCKERHUB_TOKEN }}
+      #    repository: cernoel/hello-world
+      #    readme-filepath: ./README.md
+      #    short-description: "Hello World Web Server"
